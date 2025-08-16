@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { Moon, Sun, Mail, Phone, MapPin, Github, Linkedin, ExternalLink, Download, Code, Database, Globe, Award, Calendar, GraduationCap, Briefcase, Instagram } from 'lucide-react';
 import { 
-  SiPython, SiJavascript, SiJava, SiCplusplus, SiMysql, SiHtml5, SiCss3, 
+  SiPython, SiJavascript,  SiCplusplus, SiMysql, SiHtml5, SiCss3, 
   SiReact, SiNodedotjs, SiExpress, SiMongodb, SiPostgresql, SiGit, 
-  SiDocker, SiAmazonaws, SiFirebase, SiBootstrap, SiTailwindcss,
+  SiDocker, SiAmazonwebservices, SiFirebase, SiBootstrap, SiTailwindcss,
   SiCodechef, SiLeetcode
 } from 'react-icons/si';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -43,7 +43,6 @@ function App() {
   const skills = {
     "Programming Languages": [
       { name: "Python", icon: SiPython, color: "#3776ab" },
-      { name: "Java", icon: SiJava, color: "#f89820" },
       { name: "C++", icon: SiCplusplus, color: "#00599c" },
       { name: "JavaScript", icon: SiJavascript, color: "#f7df1e" },
       { name: "SQL", icon: SiMysql, color: "#4479a1" }
@@ -63,7 +62,7 @@ function App() {
     "Tools & Frameworks": [
       { name: "Git", icon: SiGit, color: "#f05032" },
       { name: "Docker", icon: SiDocker, color: "#2496ed" },
-      { name: "AWS", icon: SiAmazonaws, color: "#ff9900" },
+      { name: "AWS", icon: SiAmazonwebservices, color: "#ff9900" },
       { name: "Firebase", icon: SiFirebase, color: "#ffca28" },
       { name: "Bootstrap", icon: SiBootstrap, color: "#7952b3" },
       { name: "Tailwind CSS", icon: SiTailwindcss, color: "#06b6d4" }
@@ -434,7 +433,6 @@ function App() {
         </div>
       </section>
 
-      {/* Contact Section */}
       <section id="contact" className="py-20 bg-white dark:bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
