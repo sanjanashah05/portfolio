@@ -10,7 +10,7 @@
 
 @layer components {
   .btn-primary {
-    @apply px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-all duration-200 font-medium;
+    @apply px-6 py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-200 font-medium shadow-lg;
   }
   
   .btn-secondary {
@@ -32,7 +32,7 @@
 
 @layer utilities {
   .text-gradient {
-    @apply bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent;
   }
   
   .glass {

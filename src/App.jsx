@@ -1,5 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import { Moon, Sun, Mail, Phone, MapPin, Github, Linkedin, ExternalLink, Download, Code, Database, Globe, Award, Calendar, GraduationCap, Briefcase } from 'lucide-react';
+import { Moon, Sun, Mail, Phone, MapPin, Github, Linkedin, ExternalLink, Download, Code, Database, Globe, Award, Calendar, GraduationCap, Briefcase, Instagram } from 'lucide-react';
+import { 
+  SiPython, SiJavascript, SiJava, SiCplusplus, SiMysql, SiHtml5, SiCss3, 
+  SiReact, SiNodedotjs, SiExpress, SiMongodb, SiPostgresql, SiGit, 
+  SiDocker, SiAmazonaws, SiFirebase, SiBootstrap, SiTailwindcss,
+  SiCodechef, SiLeetcode
+} from 'react-icons/si';
 import { motion, AnimatePresence } from 'framer-motion';
 import ContactForm from './components/ContactForm';
 import './App.css';
@@ -35,11 +41,33 @@ function App() {
   };
 
   const skills = {
-    "Programming Languages": ["Python", "Java", "C++", "JavaScript", "SQL"],
-    "Web Technologies": ["HTML", "CSS", "React", "Node.js", "Express.js"],
-    "Databases": ["MySQL", "MongoDB", "PostgreSQL"],
-    "Tools & Frameworks": ["Git", "Docker", "AWS", "Firebase", "Bootstrap", "Tailwind CSS"],
-    "Other": ["Data Structures", "Algorithms", "Machine Learning", "REST APIs"]
+    "Programming Languages": [
+      { name: "Python", icon: SiPython, color: "#3776ab" },
+      { name: "Java", icon: SiJava, color: "#f89820" },
+      { name: "C++", icon: SiCplusplus, color: "#00599c" },
+      { name: "JavaScript", icon: SiJavascript, color: "#f7df1e" },
+      { name: "SQL", icon: SiMysql, color: "#4479a1" }
+    ],
+    "Web Technologies": [
+      { name: "HTML", icon: SiHtml5, color: "#e34f26" },
+      { name: "CSS", icon: SiCss3, color: "#1572b6" },
+      { name: "React", icon: SiReact, color: "#61dafb" },
+      { name: "Node.js", icon: SiNodedotjs, color: "#339933" },
+      { name: "Express.js", icon: SiExpress, color: "#000000" }
+    ],
+    "Databases": [
+      { name: "MySQL", icon: SiMysql, color: "#4479a1" },
+      { name: "MongoDB", icon: SiMongodb, color: "#47a248" },
+      { name: "PostgreSQL", icon: SiPostgresql, color: "#336791" }
+    ],
+    "Tools & Frameworks": [
+      { name: "Git", icon: SiGit, color: "#f05032" },
+      { name: "Docker", icon: SiDocker, color: "#2496ed" },
+      { name: "AWS", icon: SiAmazonaws, color: "#ff9900" },
+      { name: "Firebase", icon: SiFirebase, color: "#ffca28" },
+      { name: "Bootstrap", icon: SiBootstrap, color: "#7952b3" },
+      { name: "Tailwind CSS", icon: SiTailwindcss, color: "#06b6d4" }
+    ]
   };
 
   const projects = [
@@ -149,7 +177,7 @@ function App() {
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   onClick={() => scrollToSection('contact')}
-                  className="px-8 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-200 flex items-center gap-2"
+                  className="px-8 py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-200 flex items-center gap-2 shadow-lg"
                 >
                   <Mail size={20} />
                   Get In Touch
@@ -173,7 +201,7 @@ function App() {
             >
               <div className="w-80 h-80 mx-auto bg-gradient-to-br from-blue-400 to-purple-600 rounded-full flex items-center justify-center">
                 <div className="w-72 h-72 bg-white dark:bg-gray-800 rounded-full flex items-center justify-center">
-                  <Code size={120} className="text-blue-600 dark:text-blue-400" />
+                  <Code size={120} className="text-purple-600 dark:text-purple-400" />
                 </div>
               </div>
             </motion.div>
@@ -209,7 +237,7 @@ function App() {
               <div className="bg-gray-50 dark:bg-gray-800 rounded-lg p-6">
                 <div className="flex items-start gap-4">
                   <div className="p-2 bg-blue-100 dark:bg-blue-900 rounded-lg">
-                    <GraduationCap className="text-blue-600 dark:text-blue-400" size={24} />
+                    <GraduationCap className="text-purple-600 dark:text-purple-400" size={24} />
                   </div>
                   <div>
                     <h4 className="text-lg font-semibold text-gray-900 dark:text-white">{education.degree}</h4>
@@ -235,15 +263,15 @@ function App() {
               className="space-y-6"
             >
               <div className="flex items-center gap-4">
-                <MapPin className="text-blue-600 dark:text-blue-400" size={24} />
+                <MapPin className="text-purple-600 dark:text-purple-400" size={24} />
                 <span className="text-gray-700 dark:text-gray-300">Surat, Gujarat, India</span>
               </div>
               <div className="flex items-center gap-4">
-                <Mail className="text-blue-600 dark:text-blue-400" size={24} />
+                <Mail className="text-purple-600 dark:text-purple-400" size={24} />
                 <span className="text-gray-700 dark:text-gray-300">sanjana.shah@example.com</span>
               </div>
               <div className="flex items-center gap-4">
-                <Phone className="text-blue-600 dark:text-blue-400" size={24} />
+                <Phone className="text-purple-600 dark:text-purple-400" size={24} />
                 <span className="text-gray-700 dark:text-gray-300">+91 98765 43210</span>
               </div>
             </motion.div>
@@ -278,14 +306,21 @@ function App() {
                 className="bg-white dark:bg-gray-900 rounded-lg p-6 shadow-lg hover:shadow-xl transition-shadow duration-300"
               >
                 <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">{category}</h3>
-                <div className="flex flex-wrap gap-2">
+                <div className="grid grid-cols-2 gap-3">
                   {skillList.map((skill) => (
-                    <span
-                      key={skill}
-                      className="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-sm font-medium"
+                    <div
+                      key={skill.name}
+                      className="flex items-center gap-2 p-2 bg-gray-50 dark:bg-gray-800 rounded-lg hover:bg-purple-50 dark:hover:bg-purple-900/20 transition-colors duration-200"
                     >
-                      {skill}
-                    </span>
+                      <skill.icon 
+                        size={20} 
+                        style={{ color: skill.color }} 
+                        className="flex-shrink-0"
+                      />
+                      <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
+                        {skill.name}
+                      </span>
+                    </div>
                   ))}
                 </div>
               </motion.div>
@@ -327,7 +362,7 @@ function App() {
                     {project.technologies.map((tech) => (
                       <span
                         key={tech}
-                        className="px-2 py-1 bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded text-sm"
+                        className="px-2 py-1 bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 rounded text-sm font-medium"
                       >
                         {tech}
                       </span>
@@ -336,14 +371,14 @@ function App() {
                   <div className="flex gap-4">
                     <a
                       href={project.github}
-                      className="flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline"
+                      className="flex items-center gap-2 text-purple-600 dark:text-purple-400 hover:underline transition-colors duration-200"
                     >
                       <Github size={16} />
                       Code
                     </a>
                     <a
                       href={project.demo}
-                      className="flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline"
+                      className="flex items-center gap-2 text-purple-600 dark:text-purple-400 hover:underline transition-colors duration-200"
                     >
                       <ExternalLink size={16} />
                       Demo
@@ -384,11 +419,11 @@ function App() {
               >
                 <div className="flex items-start gap-4">
                   <div className="p-2 bg-blue-100 dark:bg-blue-900 rounded-lg">
-                    <Briefcase className="text-blue-600 dark:text-blue-400" size={24} />
+                    <Briefcase className="text-purple-600 dark:text-purple-400" size={24} />
                   </div>
                   <div className="flex-1">
                     <h3 className="text-xl font-semibold text-gray-900 dark:text-white">{exp.title}</h3>
-                    <p className="text-blue-600 dark:text-blue-400 font-medium">{exp.company}</p>
+                    <p className="text-purple-600 dark:text-purple-400 font-medium">{exp.company}</p>
                     <p className="text-gray-500 dark:text-gray-400 text-sm mb-3">{exp.period}</p>
                     <p className="text-gray-600 dark:text-gray-300">{exp.description}</p>
                   </div>
@@ -425,7 +460,7 @@ function App() {
             >
               <div className="flex items-center gap-4">
                 <div className="p-3 bg-blue-100 dark:bg-blue-900 rounded-lg">
-                  <Mail className="text-blue-600 dark:text-blue-400" size={24} />
+                  <Mail className="text-purple-600 dark:text-purple-400" size={24} />
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold text-gray-900 dark:text-white">Email</h3>
@@ -435,7 +470,7 @@ function App() {
               
               <div className="flex items-center gap-4">
                 <div className="p-3 bg-blue-100 dark:bg-blue-900 rounded-lg">
-                  <Phone className="text-blue-600 dark:text-blue-400" size={24} />
+                  <Phone className="text-purple-600 dark:text-purple-400" size={24} />
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold text-gray-900 dark:text-white">Phone</h3>
@@ -445,7 +480,7 @@ function App() {
               
               <div className="flex items-center gap-4">
                 <div className="p-3 bg-blue-100 dark:bg-blue-900 rounded-lg">
-                  <MapPin className="text-blue-600 dark:text-blue-400" size={24} />
+                  <MapPin className="text-purple-600 dark:text-purple-400" size={24} />
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold text-gray-900 dark:text-white">Location</h3>
@@ -453,18 +488,36 @@ function App() {
                 </div>
               </div>
 
-              <div className="flex gap-4 pt-4">
+              <div className="flex gap-3 pt-4">
                 <a
                   href="#"
-                  className="p-3 bg-gray-100 dark:bg-gray-800 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors duration-200"
+                  className="p-3 bg-gray-100 dark:bg-gray-800 rounded-lg hover:bg-purple-100 dark:hover:bg-purple-900/30 transition-colors duration-200 group"
                 >
-                  <Github className="text-gray-700 dark:text-gray-300" size={24} />
+                  <Github className="text-gray-700 dark:text-gray-300 group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors duration-200" size={20} />
                 </a>
                 <a
                   href="#"
-                  className="p-3 bg-gray-100 dark:bg-gray-800 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors duration-200"
+                  className="p-3 bg-gray-100 dark:bg-gray-800 rounded-lg hover:bg-purple-100 dark:hover:bg-purple-900/30 transition-colors duration-200 group"
                 >
-                  <Linkedin className="text-gray-700 dark:text-gray-300" size={24} />
+                  <Linkedin className="text-gray-700 dark:text-gray-300 group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors duration-200" size={20} />
+                </a>
+                <a
+                  href="#"
+                  className="p-3 bg-gray-100 dark:bg-gray-800 rounded-lg hover:bg-purple-100 dark:hover:bg-purple-900/30 transition-colors duration-200 group"
+                >
+                  <SiCodechef className="text-gray-700 dark:text-gray-300 group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors duration-200" size={20} />
+                </a>
+                <a
+                  href="#"
+                  className="p-3 bg-gray-100 dark:bg-gray-800 rounded-lg hover:bg-purple-100 dark:hover:bg-purple-900/30 transition-colors duration-200 group"
+                >
+                  <SiLeetcode className="text-gray-700 dark:text-gray-300 group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors duration-200" size={20} />
+                </a>
+                <a
+                  href="#"
+                  className="p-3 bg-gray-100 dark:bg-gray-800 rounded-lg hover:bg-purple-100 dark:hover:bg-purple-900/30 transition-colors duration-200 group"
+                >
+                  <Instagram className="text-gray-700 dark:text-gray-300 group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors duration-200" size={20} />
                 </a>
               </div>
             </motion.div>

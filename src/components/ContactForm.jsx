@@ -52,6 +52,7 @@ const ContactForm = () => {
               onChange={handleChange}
               required
               className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white transition-colors duration-200"
+              className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white transition-colors duration-200"
               placeholder="Your Name"
             />
           </div>
@@ -68,6 +69,7 @@ const ContactForm = () => {
               onChange={handleChange}
               required
               className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white transition-colors duration-200"
+              className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white transition-colors duration-200"
               placeholder="your.email@example.com"
             />
           </div>
@@ -85,6 +87,7 @@ const ContactForm = () => {
             onChange={handleChange}
             required
             className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white transition-colors duration-200"
+            className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white transition-colors duration-200"
             placeholder="What's this about?"
           />
         </div>
@@ -101,6 +104,7 @@ const ContactForm = () => {
             required
             rows={5}
             className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white transition-colors duration-200 resize-none"
+            className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white transition-colors duration-200 resize-none"
             placeholder="Tell me about your project or opportunity..."
           />
         </div>
@@ -110,14 +114,14 @@ const ContactForm = () => {
           disabled={status === 'sending'}
           whileHover={{ scale: status === 'sending' ? 1 : 1.02 }}
           whileTap={{ scale: 0.98 }}
-          className={`w-full py-3 px-6 rounded-lg font-medium transition-all duration-200 flex items-center justify-center gap-2 ${
+          className={`w-full py-3 px-6 rounded-lg font-medium transition-all duration-200 flex items-center justify-center gap-2 shadow-lg ${
             status === 'sending'
               ? 'bg-gray-400 cursor-not-allowed'
               : status === 'success'
               ? 'bg-green-600 hover:bg-green-700'
               : status === 'error'
               ? 'bg-red-600 hover:bg-red-700'
-              : 'bg-blue-600 hover:bg-blue-700'
+              : 'bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700'
           } text-white`}
         >
           {status === 'sending' && (

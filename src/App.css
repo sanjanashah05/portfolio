@@ -62,9 +62,7 @@ button:focus,
 input:focus,
 textarea:focus {
   outline: none;
-  ring: 2px;
-  ring-color: #3b82f6;
-  ring-offset: 2px;
+  box-shadow: 0 0 0 2px #a855f7;
 }
 
 /* Animation utilities */
@@ -83,7 +81,7 @@ textarea:focus {
 
 /* Gradient text */
 .gradient-text {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #a855f7 0%, #3b82f6 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -205,16 +203,18 @@ section {
   gap: 1rem;
 }
 
-.skill-tag {
+.skill-item {
   transition: all 0.2s ease;
 }
 
-.skill-tag:hover {
+.skill-item:hover {
   transform: scale(1.05);
-  background-color: #3b82f6;
-  color: white;
+  background-color: #f3e8ff;
 }
 
+.dark .skill-item:hover {
+  background-color: rgba(147, 51, 234, 0.2);
+}
 /* Project card styles */
 .project-card {
   background: linear-gradient(145deg, #ffffff 0%, #f8fafc 100%);
@@ -240,11 +240,11 @@ section {
 
 /* Custom selection colors */
 ::selection {
-  background-color: #3b82f6;
+  background-color: #a855f7;
   color: white;
 }
 
 .dark ::selection {
-  background-color: #60a5fa;
+  background-color: #c084fc;
   color: #1f2937;
 }
