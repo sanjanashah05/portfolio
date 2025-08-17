@@ -127,45 +127,59 @@ function App() {
   const blogPosts = [
     {
       title: "My First Hackathon Experience",
-      excerpt: "Participating in my first 24-hour hackathon taught me more about teamwork and rapid prototyping than months of coursework. We built a mental health app and won third place!",
+      excerpt: "Participating in my first 24-hour hackathon taught me more about teamwork and rapid prototyping than months of coursework. We built a mental health app and won third place! The experience was intense but incredibly rewarding.",
       date: "Dec 2023",
       readTime: "3 min read",
       tags: ["hackathon", "teamwork", "react"]
     },
     {
       title: "Why I Chose Computer Science",
-      excerpt: "Growing up, I was fascinated by how websites worked. That curiosity led me to my first 'Hello World' in Python at age 16, and I've been hooked ever since.",
+      excerpt: "Growing up, I was fascinated by how websites worked. That curiosity led me to my first 'Hello World' in Python at age 16.",
       date: "Nov 2023",
       readTime: "2 min read",
       tags: ["journey", "inspiration"]
     },
     {
       title: "Building My First Full-Stack App",
-      excerpt: "The moment when my frontend finally connected to my backend and displayed real data from the database - pure magic! Here's what I learned about the MERN stack.",
+      excerpt: "The moment when my frontend finally connected to my backend and displayed real data from the database - pure magic! Here's what I learned about the MERN stack. It took weeks of debugging, but seeing everything work together was incredible. I learned so much about API design, database relationships, and state management.",
       date: "Oct 2023",
       readTime: "5 min read",
       tags: ["fullstack", "mongodb", "express"]
     },
     {
       title: "Debugging: My Love-Hate Relationship",
-      excerpt: "Spent 6 hours debugging only to find a missing semicolon. But that moment of triumph when everything finally works? Absolutely worth it.",
+      excerpt: "Spent 6 hours debugging only to find a missing semicolon. But that moment of triumph when everything finally works? Absolutely worth it. These moments teach patience and systematic thinking.",
       date: "Sep 2023",
       readTime: "2 min read",
       tags: ["debugging", "learning"]
     },
     {
       title: "Open Source Contributions",
-      excerpt: "Made my first open source contribution to a React component library. Small PR, but huge confidence boost! The community was incredibly welcoming.",
+      excerpt: "Made my first open source contribution to a React component library. Small PR, but huge confidence boost! The community was incredibly welcoming and taught me about collaborative coding practices.",
       date: "Aug 2023",
       readTime: "3 min read",
       tags: ["opensource", "community", "react"]
     },
     {
       title: "Learning Data Structures",
-      excerpt: "Binary trees finally clicked during a late-night study session. Sometimes the best learning happens when you least expect it.",
+      excerpt: "Binary trees finally clicked during a late-night study session. Sometimes the best learning happens when you least expect it. Now I see tree structures everywhere in real applications.",
       date: "Jul 2023",
       readTime: "4 min read",
       tags: ["algorithms", "datastructures"]
+    },
+    {
+      title: "First Internship",
+      excerpt: "My first day as a software intern was terrifying and exciting. I learned more in those three months than I had in the previous year.",
+      date: "Jun 2023",
+      readTime: "3 min read",
+      tags: ["internship", "growth"]
+    },
+    {
+      title: "CSS Animations Discovery",
+      excerpt: "Discovered CSS animations and spent the entire weekend making everything bounce and fade. My portfolio looked like a disco ball, but I was so proud!",
+      date: "May 2023",
+      readTime: "2 min read",
+      tags: ["css", "animations", "frontend"]
     }
   ];
 

@@ -3,20 +3,13 @@ import { motion } from 'framer-motion';
 import { Calendar, Clock } from 'lucide-react';
 
 const BlogCard = ({ post, index }) => {
-  // Random rotation for collage effect
-  const rotation = (index % 2 === 0 ? 1 : -1) * (Math.random() * 4 + 1);
-  
   return (
     <motion.div
-      initial={{ opacity: 0, y: 30, rotate: 0 }}
-      whileInView={{ opacity: 1, y: 0, rotate: rotation }}
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, delay: index * 0.1 }}
       viewport={{ once: true }}
-      whileHover={{ 
-        scale: 1.02, 
-        rotate: 0,
-        transition: { duration: 0.2 }
-      }}
+      whileHover={{ scale: 1.02 }}
       className="group cursor-pointer mb-6"
     >
       <div className="bg-white dark:bg-gray-800 rounded-lg p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-gray-700">
